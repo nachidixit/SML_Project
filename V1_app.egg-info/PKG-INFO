@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: V1_app
+Version: 0.0.1
+Summary: A sample Python application
+Home-page: https://github.com/nachidixit/SML_Project/tree/main
+Author: Nachiket Dixit
+Author-email: erdnachiket@gmail.com
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: scikit-learn
+Requires-Dist: seaborn
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: summary
