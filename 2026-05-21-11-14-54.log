@@ -1,0 +1,7 @@
+2026-05-21 11:14:54,212 - DEBUG - Detailed diagnostic information.
+2026-05-21 11:14:54,212 - INFO - Confirmation that things are working.
+2026-05-21 11:14:54,212 - WARNING - An unexpected issue occurred.
+2026-05-21 11:14:54,213 - INFO - Entered the data ingestion method or component
+2026-05-21 11:14:54,232 - INFO - Read the dataset as dataframe
+2026-05-21 11:14:54,263 - INFO - Saved the raw data to path: artifacts\raw_data.csv
+2026-05-21 11:15:08,660 - INFO - Split the data into train and test sets and saved to paths: artifacts\train_data.csv and artifacts\test_data.csv
