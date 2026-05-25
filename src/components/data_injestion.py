@@ -22,6 +22,8 @@ class DataIngestion():
             df = pd.read_csv(os.path.join('notebook/data', 'stud.csv'))
             logging.info("Read the dataset as dataframe")
 
+            df["total_score"] = df["math_score"] + df["reading_score"] + df["writing_score"]
+
             os.makedirs(os.path.dirname(self.ingestion_config.raw_data_path), exist_ok=True)
 
             df.to_csv(self.ingestion_config.raw_data_path, index=False)

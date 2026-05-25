@@ -10,7 +10,8 @@ logging.basicConfig(
     filename=log_file,
     encoding='utf-8',
     level=logging.DEBUG, 
-    format='%(asctime)s - %(levelname)s - %(message)s'
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    level=logging.INFO
 )
 
 logging.debug("Detailed diagnostic information.")
