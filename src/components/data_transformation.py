@@ -21,7 +21,7 @@ class DataTransformationConfig():
     preprocessor_obj_file_path: str = os.path.join('artifacts', 'preprocessor.pkl')
     def __init__(self):
         self.preprocessor_config = DataTransformationConfig()
-    def get_data_transformer_object(self):
+    def get_data_transformer_object(self, train_df):
         try:
             num_col = train_df.select_dtypes(include=[np.number]).columns
             cat_col = train_df.select_dtypes(include=['object']).columns
@@ -55,7 +55,7 @@ class DataTransformationConfig():
                 test_df = pd.read_csv(test_path)
                 logging.info("Read train and test data successfully")
 
-                preprocessor_obj = self.get_data_transformer_object()
+                preprocessor_obj = self.get_data_transformer_object(train_df)
 
                 target_column_name = 'total_score'
                 input_feature_train_df = train_df.drop(columns=[target_column_name], axis=1)
