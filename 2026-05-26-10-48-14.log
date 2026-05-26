@@ -1,0 +1,10 @@
+2026-05-26 10:48:14,809 - INFO - Confirmation that things are working.
+2026-05-26 10:48:14,809 - WARNING - An unexpected issue occurred.
+2026-05-26 10:48:14,821 - INFO - Entered the data ingestion method or component
+2026-05-26 10:48:14,828 - INFO - Read the dataset as dataframe
+2026-05-26 10:48:14,836 - INFO - Saved the raw data to path: artifacts\raw_data.csv
+2026-05-26 10:48:14,846 - INFO - Split the data into train and test sets and saved to paths: artifacts\train_data.csv and artifacts\test_data.csv
+2026-05-26 10:48:14,871 - INFO - Read train and test data successfully
+2026-05-26 10:48:14,873 - INFO - Numerical and categorical pipelines created successfully
+2026-05-26 10:48:14,876 - ERROR - Error occurred in file: C:\Users\NachiketDixit\sml_project\src\components\data_transformation.py at line: 71 with error message: A given column is not a column of the dataframe
+2026-05-26 10:48:14,876 - ERROR - Error occurred in file: C:\Users\NachiketDixit\sml_project\src\components\model_trainer.py at line: 26 with error message: Error occurred in file: C:\Users\NachiketDixit\sml_project\src\components\data_transformation.py at line: 71 with error message: A given column is not a column of the dataframe

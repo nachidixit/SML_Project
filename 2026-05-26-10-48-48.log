@@ -1,0 +1,12 @@
+2026-05-26 10:48:48,177 - INFO - Confirmation that things are working.
+2026-05-26 10:48:48,177 - WARNING - An unexpected issue occurred.
+2026-05-26 10:48:48,194 - INFO - Entered the data ingestion method or component
+2026-05-26 10:48:48,204 - INFO - Read the dataset as dataframe
+2026-05-26 10:48:48,210 - INFO - Saved the raw data to path: artifacts\raw_data.csv
+2026-05-26 10:48:48,222 - INFO - Split the data into train and test sets and saved to paths: artifacts\train_data.csv and artifacts\test_data.csv
+2026-05-26 10:48:48,239 - INFO - Read train and test data successfully
+2026-05-26 10:48:48,243 - INFO - Numerical and categorical pipelines created successfully
+2026-05-26 10:48:48,309 - INFO - Data transformation completed successfully
+2026-05-26 10:48:48,316 - INFO - Model training is completed successfully
+2026-05-26 10:48:48,317 - INFO - Model evaluation is completed successfully with r2 score: 0.9861924340362369
+2026-05-26 10:48:48,321 - INFO - Trained model saved at path: artifacts\model.pkl

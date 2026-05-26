@@ -1,0 +1,8 @@
+2026-05-26 10:43:25,110 - INFO - Confirmation that things are working.
+2026-05-26 10:43:25,111 - WARNING - An unexpected issue occurred.
+2026-05-26 10:43:36,221 - INFO - Model trainer pipeline is initiated
+2026-05-26 10:43:36,221 - INFO - Entered the data ingestion method or component
+2026-05-26 10:43:36,238 - INFO - Read the dataset as dataframe
+2026-05-26 10:43:36,239 - ERROR - Error occurred in file: C:\Users\NachiketDixit\sml_project\src\components\data_injestion.py at line: 25 with error message: 'math_score'
+2026-05-26 10:43:36,239 - ERROR - Error occurred in file: C:\Users\NachiketDixit\sml_project\src\components\model_trainer.py at line: 25 with error message: Error occurred in file: C:\Users\NachiketDixit\sml_project\src\components\data_injestion.py at line: 25 with error message: 'math_score'
+2026-05-26 10:43:36,239 - ERROR - Error occurred in file: C:\Users\NachiketDixit\sml_project\src\pipeline\trainer_pipeline.py at line: 14 with error message: Error occurred in file: C:\Users\NachiketDixit\sml_project\src\components\model_trainer.py at line: 25 with error message: Error occurred in file: C:\Users\NachiketDixit\sml_project\src\components\data_injestion.py at line: 25 with error message: 'math_score'

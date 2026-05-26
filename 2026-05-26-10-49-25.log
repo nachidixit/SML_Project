@@ -1,0 +1,4 @@
+2026-05-26 10:49:25,386 - INFO - Confirmation that things are working.
+2026-05-26 10:49:25,386 - WARNING - An unexpected issue occurred.
+2026-05-26 10:49:25,398 - INFO - Trained model loaded successfully for prediction
+2026-05-26 10:49:25,399 - ERROR - Error occurred in file: C:\Users\NachiketDixit\sml_project\src\pipeline\predict_pipeline.py at line: 22 with error message: X has 3 features, but ColumnTransformer is expecting 8 features as input.

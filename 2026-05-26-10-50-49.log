@@ -1,0 +1,28 @@
+2026-05-26 10:50:49,075 - INFO - Confirmation that things are working.
+2026-05-26 10:50:49,075 - WARNING - An unexpected issue occurred.
+2026-05-26 10:50:51,280 - INFO - Model trainer pipeline is initiated
+2026-05-26 10:50:51,280 - INFO - Entered the data ingestion method or component
+2026-05-26 10:50:51,293 - INFO - Read the dataset as dataframe
+2026-05-26 10:50:51,308 - INFO - Saved the raw data to path: artifacts\raw_data.csv
+2026-05-26 10:50:51,324 - INFO - Split the data into train and test sets and saved to paths: artifacts\train_data.csv and artifacts\test_data.csv
+2026-05-26 10:50:51,340 - INFO - Read train and test data successfully
+2026-05-26 10:50:51,342 - INFO - Numerical and categorical pipelines created successfully
+2026-05-26 10:50:51,402 - INFO - Data transformation completed successfully
+2026-05-26 10:50:51,408 - INFO - Model training is completed successfully
+2026-05-26 10:50:51,408 - INFO - Model evaluation is completed successfully with r2 score: 0.9852168086173321
+2026-05-26 10:50:51,410 - INFO - Trained model saved at path: artifacts\model.pkl
+2026-05-26 10:50:51,410 - INFO - Model trainer pipeline is completed successfully
+2026-05-26 10:51:13,477 - INFO - Trained model loaded successfully for prediction
+2026-05-26 10:53:36,577 - INFO - Model trainer pipeline is initiated
+2026-05-26 10:53:36,577 - INFO - Entered the data ingestion method or component
+2026-05-26 10:53:36,582 - INFO - Read the dataset as dataframe
+2026-05-26 10:53:36,588 - INFO - Saved the raw data to path: artifacts\raw_data.csv
+2026-05-26 10:53:36,598 - INFO - Split the data into train and test sets and saved to paths: artifacts\train_data.csv and artifacts\test_data.csv
+2026-05-26 10:53:36,613 - INFO - Read train and test data successfully
+2026-05-26 10:53:36,615 - INFO - Numerical and categorical pipelines created successfully
+2026-05-26 10:53:36,633 - INFO - Data transformation completed successfully
+2026-05-26 10:53:36,637 - INFO - Model training is completed successfully
+2026-05-26 10:53:36,638 - INFO - Model evaluation is completed successfully with r2 score: 0.9862332404502231
+2026-05-26 10:53:36,639 - INFO - Trained model saved at path: artifacts\model.pkl
+2026-05-26 10:53:36,640 - INFO - Model trainer pipeline is completed successfully
+2026-05-26 10:53:54,683 - INFO - Trained model loaded successfully for prediction

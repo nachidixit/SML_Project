@@ -14,13 +14,16 @@ from sklearn.compose import ColumnTransformer
 from src.logger import logging
 from src.custom_exception import CustomException
 from dataclasses import dataclass
-import SimpleImputer
+from sklearn.impute import SimpleImputer
 
 @dataclass
 class DataTransformationConfig():
     preprocessor_obj_file_path: str = os.path.join('artifacts', 'preprocessor.pkl')
+
+class DataTransformation():
     def __init__(self):
         self.preprocessor_config = DataTransformationConfig()
+    
     def get_data_transformer_object(self, train_df):
         try:
             num_col = train_df.select_dtypes(include=[np.number]).columns
@@ -48,38 +51,38 @@ class DataTransformationConfig():
             return preprocessor
         except Exception as e:
             raise CustomException(e, sys.exc_info())
-        
-        def initiate_data_transformation(self, train_path, test_path):
-            try:
-                train_df = pd.read_csv(train_path)
-                test_df = pd.read_csv(test_path)
-                logging.info("Read train and test data successfully")
+    
+    def initiate_data_transformation(self, train_path, test_path):
+        try:
+            train_df = pd.read_csv(train_path)
+            test_df = pd.read_csv(test_path)
+            logging.info("Read train and test data successfully")
 
-                preprocessor_obj = self.get_data_transformer_object(train_df)
+            target_column_name = 'total_score'
+            input_feature_train_df = train_df.drop(columns=[target_column_name])
+            target_feature_train_df = train_df[target_column_name]
 
-                target_column_name = 'total_score'
-                input_feature_train_df = train_df.drop(columns=[target_column_name], axis=1)
-                target_feature_train_df = train_df[target_column_name]
+            input_feature_test_df = test_df.drop(columns=[target_column_name])
+            target_feature_test_df = test_df[target_column_name]
 
-                input_feature_test_df = test_df.drop(columns=[target_column_name], axis=1)
-                target_feature_test_df = test_df[target_column_name]
+            preprocessor_obj = self.get_data_transformer_object(input_feature_train_df)
 
-                ## transform the input features
-                input_feature_train_arr = preprocessor_obj.fit_transform(input_feature_train_df)
-                input_feature_test_arr = preprocessor_obj.transform(input_feature_test_df)
+            ## transform the input features
+            input_feature_train_arr = preprocessor_obj.fit_transform(input_feature_train_df)
+            input_feature_test_arr = preprocessor_obj.transform(input_feature_test_df)
 
-                ## save the preprocessor object
-                with open(self.preprocessor_config.preprocessor_obj_file_path, 'wb') as f:
-                    pickle.dump(preprocessor_obj, f)
-                
-                logging.info("Data transformation completed successfully")
+            ## save the preprocessor object
+            with open(self.preprocessor_config.preprocessor_obj_file_path, 'wb') as f:
+                pickle.dump(preprocessor_obj, f)
+            
+            logging.info("Data transformation completed successfully")
 
-                return (
-                    input_feature_train_arr,
-                    target_feature_train_df,
-                    input_feature_test_arr,
-                    target_feature_test_df,
-                    self.preprocessor_config.preprocessor_obj_file_path
-                )
-            except Exception as e:
-                raise CustomException(e, sys.exc_info())
+            return (
+                input_feature_train_arr,
+                target_feature_train_df,
+                input_feature_test_arr,
+                target_feature_test_df,
+                self.preprocessor_config.preprocessor_obj_file_path
+            )
+        except Exception as e:
+            raise CustomException(e, sys.exc_info())

@@ -1,0 +1,4 @@
+2026-05-26 10:49:03,849 - INFO - Confirmation that things are working.
+2026-05-26 10:49:03,849 - WARNING - An unexpected issue occurred.
+2026-05-26 10:49:03,860 - INFO - Trained model loaded successfully for prediction
+2026-05-26 10:49:03,861 - ERROR - Error occurred in file: C:\Users\NachiketDixit\sml_project\src\pipeline\predict_pipeline.py at line: 17 with error message: [Errno 2] No such file or directory: 'artifacts\\../preprocessor.pkl'
